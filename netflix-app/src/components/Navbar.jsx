@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import "./Nav.css";
+import "../styles/components/Navbar.css";
 
-function Nav() {
+function Nav({ showPfp }) {
   const [show, handleShow] = useState(false);
 
   const transitionNavbar = () => {
@@ -19,14 +19,13 @@ function Nav() {
   }, []);
 
   return (
-    <div className={`nav ${show && "nav-black"}`}>
+    <div className={`navigation ${show ? "nav-black" : ""}`}>
       <div className="nav-contents">
         <img
           className="nav-logo"
           src="https://loodibee.com/wp-content/uploads/Netflix-logo.png"
           alt="Netflix"
         />
-
         <img
           className="nav-avatar"
           src="https://e7.pngegg.com/pngimages/980/304/png-clipart-computer-icons-user-profile-avatar-heroes-silhouette-thumbnail.png"

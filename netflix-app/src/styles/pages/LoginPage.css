@@ -1,0 +1,70 @@
+.loginPage {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("https://wpassets.brainstation.io/app/uploads/2017/04/13100509/Netflix-Background.jpg");
+  background-position: center;
+  background-size: cover;
+  z-index: 0;
+}
+
+.loginPage .login-gradient {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.loginPage .login-nav {
+  position: relative;
+  z-index: 2;
+}
+
+.loginPage .get-started {
+  position: relative;
+  z-index: 10;
+}
+
+.bttn {
+  padding: 8px 15px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #ff4500;
+  border: none;
+  border-radius: 1px;
+  transition: all 450ms ease;
+}
+
+.btn-signin {
+  position: fixed;
+  top: 22px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.get-started-btn {
+  padding: 0 15px;
+  height: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.bttn:hover {
+  color: #ff4500;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.loginPage .gets-input {
+  height: 50px;
+  border: none;
+  border-radius: 1px 0 0 1px;
+}
