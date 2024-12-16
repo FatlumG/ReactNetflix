@@ -1,62 +1,7 @@
-// import React, { useEffect } from "react";
-// import HomePage from "./pages/HomePage";
-// import LoginPage from "./pages/LoginPage";
-// import {
-//   BrowserRouter as Router,
-//   Routes as Switch,
-//   Route,
-// } from "react-router-dom";
-// import "bootstrap/dist/css/bootstrap.css";
-// import "./styles/App.css";
-// import auth from "./firebase";
-// import { onAuthStateChanged } from "firebase/auth";
-// import { useDispatch } from "react-redux";
-// import { login, logout } from "./features/userSlice";
-
-// function App() {
-//   const user = null;
-//   const dispatch = useDispatch();
-
-//   useEffect(() => {
-//     const unsubcribe = onAuthStateChanged(auth, (userAuth) => {
-//       if (userAuth) {
-//         //Logged in
-//         console.log(userAuth);
-//         dispatch(
-//           login({
-//             uid: userAuth.uid,
-//             email: userAuth.email,
-//           })
-//         );
-//       } else {
-//         //Logged out
-//         dispatch(logout);
-//       }
-//     });
-
-//     return () => unsubcribe();
-//   }, []);
-
-//   return (
-//     <div className="app">
-//       <Router>
-//         {!user ? (
-//           <LoginPage />
-//         ) : (
-//           <Switch>
-//             <Route path="/" element={<HomePage />} />
-//           </Switch>
-//         )}
-//       </Router>
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import React, { useEffect } from "react";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
+import ProfilePage from "./pages/ProfilePage";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles/App.css";
@@ -66,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from "./features/userSlice";
 
 function App() {
-  const user = useSelector(selectUser ); // Select user from Redux store
+  const user = useSelector(selectUser); // Select user from Redux store
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -97,6 +42,7 @@ function App() {
           <LoginPage />
         ) : (
           <Routes>
+            <Route path="/profile" element={<ProfilePage />} />
             <Route path="/" element={<HomePage />} />
           </Routes>
         )}
