@@ -14,7 +14,7 @@ function ProfilePage() {
       <Navbar />
       <div className="profile-body w-50 px-3 gap-0 mt-5">
         <h1>Edit Profile</h1>
-        <hr/>
+        <hr />
         <div className="profile-info row">
           <img
             className="profile-photo col-2 align-self-start"
@@ -22,10 +22,17 @@ function ProfilePage() {
             alt="Profile photo"
           />
           <div className="profile-details col-10">
-            <h2 className="fs-6 bg-secondary p-3 w-100 d-block m-0">{user.email}</h2>
+            <h2 className="fs-6 bg-secondary p-3 w-100 d-block m-0">
+              {user.email}
+            </h2>
             <div className="profile-plans">
-                <h3>Plans (Current Plan:)</h3>
-              <Button className="sign-out-btn w-100 py-2 text-white border-0" onClick={() => auth.signOut()}>Sign Out</Button>
+              <h3>Plans (Comming Soon)</h3>
+              <Button
+                className="sign-out-btn w-100 py-2 text-white border-0"
+                onClick={() => auth.signOut()}
+              >
+                Sign Out
+              </Button>
             </div>
           </div>
         </div>

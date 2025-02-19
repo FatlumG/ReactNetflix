@@ -3,7 +3,6 @@ import Nav from "../components/Navbar";
 import Banner from "../components/Banner";
 import Row from "../components/Row";
 import requests from "../Request";
-import "../styles/pages/HomePage.css";
 
 function HomePage() {
   return (
