@@ -18,7 +18,6 @@ function App() {
     const unsubscribe = onAuthStateChanged(auth, (userAuth) => {
       if (userAuth) {
         // User is logged in
-        console.log("User logged in:", userAuth);
         dispatch(
           login({
             uid: userAuth.uid,
@@ -27,7 +26,6 @@ function App() {
         );
       } else {
         // User is logged out
-        console.log("User logged out");
         dispatch(logout());
       }
     });

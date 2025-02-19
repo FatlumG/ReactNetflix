@@ -21,20 +21,14 @@ function Row({ title, fetchUrl, isLargeRow }) {
     <div className="row">
       <h2>{title}</h2>
       <div className="row-posters">
-        {movies.map(
-          (movie) =>
-            ((isLargeRow && movie.poster_path) ||
-              (!isLargeRow && movie.backdrop_path)) && (
-              <img
-                key={movie.id}
-                className={`row-poster ${isLargeRow && "row-poster-large"}`}
-                src={`${baseUrl}${
-                  isLargeRow ? movie.poster_path : movie.backdrop_path
-                }`}
-                alt={movie.name}
-              />
-            )
-        )}
+        {movies.map((movie) => (
+          <img
+            key={movie.id}
+            className="row-poster"
+            src={`${baseUrl}${movie.poster_path}`}
+            alt={movie.name}
+          />
+        ))}
       </div>
     </div>
   );
