@@ -1,0 +1,21 @@
+.signInPage {
+  position: relative;
+  max-width: 500px;
+  width: 90%;
+  height: auto;
+  padding: 40px 70px 80px;
+  z-index: 10;
+}
+
+.signInPage > form > input {
+  padding: 12px;
+}
+
+.signInPage > form > button {
+  padding: 12px 0;
+  background-color: #ff4500;
+}
+
+.signInPage > form > h4{
+    font-size: 14px;
+}
